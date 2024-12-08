@@ -19,12 +19,34 @@
 
         .scroll-wrapper {
             display: flex;
-            animation: scroll 200s linear infinite; /* Increased duration for slower scroll */
+            animation: scroll 6000s linear infinite; /* Increased duration for slower scroll */
         }
 
-        .scroll-wrapper img {
-            margin-right: 20px; /* Margin between images */
-            height: 200px; /* Fixed height for images */
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-right: 20px;
+            width: 150px; /* Fixed width for card */
+            text-align: center;
+        }
+
+        .card img {
+            max-height: 150px; /* Restrict image height */
+            width: 100%; /* Prevent image from overflowing */
+            object-fit: contain;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
         }
 
         /* Keyframes for infinite scrolling */
@@ -42,18 +64,20 @@
 
 <div class="scroll-container">
     <div class="scroll-wrapper" id="scroll-wrapper">
-        <!-- Images will be dynamically inserted here using JavaScript -->
+        <!-- Cards will be dynamically inserted here using JavaScript -->
     </div>
 </div>
 
 <script>
-    // Define the 5 image URLs
-    const imageUrls = [
-        "https://via.placeholder.com/150/ff7f7f", // Image 1
-        "https://via.placeholder.com/150/7f7fff", // Image 2
-        "https://via.placeholder.com/150/7fff7f", // Image 3
-        "https://via.placeholder.com/150/ffff7f", // Image 4
-        "https://via.placeholder.com/150/ff7fff"  // Image 5
+    // Define the images with their names
+    const images = [
+        { url: "./Icons/WE Experts/Banking.png", name: "Banking" },
+        { url: "./Icons/WE Experts/Education.png", name: "Education" },
+        { url: "./Icons/WE Experts/Goods-n-Distribution.png", name: "Goods & Distribution" },
+        { url: "./Icons/WE Experts/Healthcare.png", name: "Healthcare" },
+        { url: "./Icons/WE Experts/Life-Sciences.png", name: "Life Sciences" },
+        { url: "./Icons/WE Experts/Manufacturing.png", name: "Manufacturing" },
+        { url: "./Icons/WE Experts/Travel-n-Logistics.png", name: "Travel & Logistics" }
     ];
 
     const scrollWrapper = document.getElementById('scroll-wrapper');
@@ -61,15 +85,28 @@
     // Number of times the images should repeat (500 iterations)
     const iterations = 500;
 
-    // Loop through and add the images to the wrapper
+    // Loop through and add the cards to the wrapper
     for (let i = 0; i < iterations; i++) {
-        imageUrls.forEach((url) => {
+        images.forEach((image) => {
+            // Create the card container
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            // Create the image element
             const img = document.createElement('img');
-            img.src = url;
-            img.alt = `Image ${i + 1}`;
-            img.style.marginRight = '20px'; // Set margin between images
-            img.style.height = '200px'; // Set image height
-            scrollWrapper.appendChild(img);
+            img.src = image.url;
+            img.alt = image.name;
+
+            // Create the image name element
+            const name = document.createElement('p');
+            name.textContent = image.name;
+
+            // Append the image and name to the card
+            card.appendChild(img);
+            card.appendChild(name);
+
+            // Append the card to the scroll wrapper
+            scrollWrapper.appendChild(card);
         });
     }
 </script>

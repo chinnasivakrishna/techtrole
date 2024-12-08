@@ -190,7 +190,7 @@
             font-weight: bold;
             text-transform: uppercase;
             color: #000;
-            background-color: #ccc;
+            background-color: #8E8E8E;
             padding: 10px 60px;
             display: inline-block;
             clip-path: polygon(0 0, 100% 0, 90% 100%, 11% 100%);
@@ -198,15 +198,42 @@
         .scroll-container {
             display: flex;
             overflow: hidden;
+            width: 100vw; /* Make it fit the screen width */
         }
+
         .scroll-wrapper {
             display: flex;
-            animation: scroll 9000s linear infinite;
+            animation: scroll 6000s linear infinite; /* Increased duration for slower scroll */
         }
-        .scroll-wrapper img {
+
+        .card1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
             margin-right: 20px;
-            height: 200px;
+            width: 150px; /* Fixed width for card */
+            text-align: center;
         }
+
+        .card1 img {
+            max-height: 150px; /* Restrict image height */
+            width: 100%; /* Prevent image from overflowing */
+            object-fit: contain;
+        }
+
+        .card1 p {
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Keyframes for infinite scrolling */
         @keyframes scroll {
             from {
                 transform: translateX(0);
@@ -232,7 +259,6 @@
         }
         .portfolio{
             background-color: #DDDED9;
-            border-radius: 20px;
             justify-content: space-between;
         }
         .left-portfolio{
@@ -246,8 +272,7 @@
         }
         .image-container img {
             
-            width: 100%;
-            height: 10%;
+            width: 80%;
         }
         .design-samples-section {
             background-color: #f8f9fa;
@@ -261,6 +286,8 @@
         }
         .design-sample-img img {
             width: 100%;
+            margin: 0px;
+            padding: 0;
             height: auto;
         }
         .video-preview {
@@ -355,7 +382,7 @@
 
                 <div class="site-logo textt-start">
                     <a href="index.html" class="text-black">
-                        <img src="./logoname.png" class="logoname img-fluid">
+                        <img src="./logo Name.png" class="logoname img-fluid">
                     </a>
                 </div>
 
@@ -396,7 +423,7 @@
                                 </ul>
                             </li>
                             <li><a href="https://support.techtrole.com/" class="nav-link">portofolio</a></li>
-                            <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                            <li><a href="#contact-section" class="nav-link">Pricing</a></li>
                             <li>
                                 <div class="row mx-0">
                                     <a name="" id="" class="btn button_bg text-light btn-sm" href="#"
@@ -429,12 +456,10 @@
             <canvas id="interactiveBackground"></canvas>
         
             <div class="content">
-              <h1>Welcome to Techtrole</h1>
-              <h2>One Stop Shop for All Your Digital Needs</h2>
+              <h2>Welcome to Techtrole</h2>
+              <h1>All-in-One Digital Marketing Solution</h1>
               <p>
-                Techtrole is committed to being the leading digital marketing agency,
-                delivering innovative and results-oriented marketing solutions that drive success
-                for our clients.
+                Grow your business and reach more people with Techtrole.We make digital marketing easy and effective for you.
               </p>
               <button class="btn btn-custom">Request Quote</button>
               <button class="btn btn-custom">Learn More</button>
@@ -445,12 +470,10 @@
     <div class="container">
       <div class="row align-items-center justify-content-around">
         <div class="col-md-7">
-          <p class="text-uppercase text-danger fw-bold mb-2">About Us</p>
-          <h2 class="h3 fw-bold">Welcome to TECHTROLE Digital Marketing!</h2>
-          <p class="lead mb-4">At TECHTROLE, we help businesses grow online. Our expert team specializes in digital marketing, website design, and mobile app development, offering creative and effective solutions tailored to your needs.
-            With bases in Bhimavaram, Andhra Pradesh, and Hyderabad, Telangana, we work with businesses from different industries to build strong online presences and achieve great results. We focus on understanding your goals and delivering personalized strategies that work for you.
-            Your satisfaction is our priority. We are dedicated to providing high-quality services and going the extra mile to ensure your success.
-            Partner with TECHTROLE Digital Marketing to grow your business and achieve your online goals!
+          <h2 class="text-uppercase text-danger fw-bold mb-2 text-center">About Us</h2>
+          <p class="lead mb-4">Welcome to Techtrole Digital Marketing!We are a digital marketing agency focused on helping businesses grow online. Our services include digital marketing, website development, and branding solutions. We combine creativity with strategy to create customized services that get results.<br>
+            We help promote your brand by posting engaging content and creating promotional videos for your target audience. Whether it's reaching customers in specific groups or connecting with people near you, we make sure your brand gets noticed.<br>
+            we work with businesses in different industries, providing solutions that match their needs. At Techtrole, your success is our priority. We are committed to delivering great results and helping you grow. Let’s work together to take your business to the next level.
             </p>
           <!-- <a href="./services.html" class="btn btn-danger btn-lg">Read More</a> -->
         </div>
@@ -464,10 +487,14 @@
     </div>
   </div>
   <!--our services-->
-
+  <h2 class="text-center fw-bold text-danger">OUR SERVICES</h2>
+  <p class="text-center">At Techtrole, our goal is to help your business grow with effective and creative digital solutions. We offer a full range of services to boost your brand and improve your online presence.</p>
   <section class="container services-section py-5">
+    
     <div class="container">
+        
         <div class="row row-cols-1 row-cols-md-3 g-4">
+            
             <div class="col">
                 <div class="card service-card rotate-left">
                     <div class="card-inner">
@@ -485,11 +512,11 @@
             </div>
             
             <div class="col">
-                <div class="card service-card rotate-top">
+                <div class="card service-card rotate-bottom">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="./Our Services Icons/Our Services Icons/Services.png" class="card-img-top p-0" alt="Social Media">
-                            <h5 class="card-title mt-3">Graphic Designing</h5>
+                            <img src="./Our Services Icons/Our Services Icons/Social-Media-Marketing.png" class="card-img-top p-0" alt="Social Media">
+                            <h5 class="card-title mt-3">Social Media Marketing</h5>
                         </div>
                         <div class="card-back rotate-top-back">
                             <div class="card-back-wrapper">
@@ -503,8 +530,8 @@
                 <div class="card service-card rotate-right">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="./Our Services Icons/Our Services Icons/Social-Media-Marketing.png" class="card-img-top p-0" alt="Google Ads">
-                            <h5 class="card-title mt-3">Social Media Marketing</h5>
+                            <img src="./Our Services Icons/Our Services Icons/WEb-Designing.png" class="card-img-top p-0" alt="Google Ads">
+                            <h5 class="card-title mt-3">Web Designing</h5>
                         </div>
                         <div class="card-back rotate-right-back">
                             <div class="card-back-wrapper">
@@ -518,8 +545,8 @@
                 <div class="card service-card rotate-left">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="./Our Services Icons/Our Services Icons/WEb-Designing.png" class="card-img-top p-0" alt="SEO">
-                            <h5 class="card-title mt-3">Web Designing</h5>
+                            <img src="./Our Services Icons/Our Services Icons/App-development.png" class="card-img-top p-0" alt="SEO">
+                            <h5 class="card-title mt-3">App Development</h5>
                         </div>
                         <div class="card-back rotate-left-back">
                             <div class="card-back-wrapper">
@@ -530,11 +557,11 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card service-card rotate-bottom">
+                <div class="card service-card rotate-top">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="./Our Services Icons/Our Services Icons/App-development.png" class="card-img-top p-0" alt="Analytics">
-                            <h5 class="card-title mt-3">App Development</h5>
+                            <img src="./Our Services Icons/Our Services Icons/Seo-&-Marketing-Straterhy.png" class="card-img-top p-0" alt="Analytics">
+                            <h5 class="card-title mt-3">Seo & Marketing Straterhy</h5>
                         </div>
                         <div class="card-back rotate-bottom-back">
                             <div class="card-back-wrapper">
@@ -548,8 +575,8 @@
                 <div class="card service-card rotate-right">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="./Our Services Icons/Our Services Icons/Seo-&-Marketing-Straterhy.png" class="card-img-top p-0" alt="Google Ads">
-                            <h5 class="card-title mt-3">Seo & Marketing Straterhy</h5>
+                            <img src="./Our Services Icons/Our Services Icons/Services.png" class="card-img-top p-0" alt="Google Ads">
+                            <h5 class="card-title mt-3">Servicing</h5>
                         </div>
                         <div class="card-back rotate-right-back">
                             <div class="card-back-wrapper">
@@ -564,24 +591,25 @@
 </section>
 
 
-<div class="text-center my-3">
-    <img src="./01.jpg" alt="Swimming Pool Image" style="width: 100%;">
+<div class="text-center mt-3">
+    <img src="./Changes/New folder/01.jpg" alt="Swimming Pool Image" style="width: 100%;">
   </div>
   <section class="experts-section">
     <h2>we are experts in</h2>
     <div class="mt-4">
-      <div class="scroll-container">
-        <div class="scroll-wrapper" id="scroll-wrapper">
+        <div class="scroll-container my-2">
+            <div class="scroll-wrapper" id="scroll-wrapper">
+                <!-- Cards will be dynamically inserted here using JavaScript -->
+            </div>
         </div>
-    </div>
         </div>
       </div>
     </div>
   </section>
-  <div class="container portfolio-section">
-    <div class="container portfolio">
+  <div class="portfolio-section">
+    <div class="mt-2 portfolio">
     <div class="row align-items-center">
-        <div class="col-md-8 left-portfolio">
+        <div class="col-md-7 left-portfolio mx-4">
             <h2 class="portfolio-title">Portfolio</h2>
             <p class="portfolio-description">
                 At TECHTROLE Digital Marketing, we are proud to showcase the work we've done for our clients. Our portfolio includes a variety of successful digital marketing campaigns, custom website designs, and innovative mobile app development. Each project demonstrates our expertise, creativity, and commitment to delivering results that exceed expectations. We focus on understanding our clients' needs and providing tailored solutions. Browse through our portfolio to see how we’ve helped businesses grow and succeed online!            </p>
@@ -593,28 +621,28 @@
     </div>
 </div>
 </div>
-<div class="container design-samples-section">
-  <div class="row">
+<div class="design-samples-section">
+  <div class="row mx-5">
       <div class="col-md-6">
           <div class="row">
               <div class="col-5 design-sample-img">
-                  <img src="./Our Services Icons/App development.png" alt="Design Sample 1" class="design">
+                  <img src="./Hilights/02.jpg" alt="Design Sample 1" class="design">
               </div>
               <div class="col-5 design-sample-img">
-                  <img src="./Our Services Icons/App development.png" alt="Design Sample 2" class="design">
+                  <img src="./Hilights/03.jpg" alt="Design Sample 2" class="design">
               </div>
               <div class="col-5 design-sample-img">
-                  <img src="./Our Services Icons/App development.png" alt="Design Sample 3" class="design">
+                  <img src="./Hilights/04.jpg" alt="Design Sample 3" class="design">
               </div>
               <div class="col-5 design-sample-img">
-                  <img src="./Our Services Icons/App development.png" alt="Design Sample 4" class="design">
+                  <img src="./Hilights/05.jpg" alt="Design Sample 4" class="design">
               </div>
           </div>
       </div>
       <div class="col-md-6">
           <div class="video-preview">
             <video width="600" height="450" controls>
-              <source src="./Logo Animation - 2.mp4" type="video/mp4">
+              <source src="./Hilights/Our Work Video.mp4" type="video/mp4">
               Your browser does not support the video tag.
           </video>
           </div>
@@ -657,44 +685,44 @@
       </div>
   </div>
 </div>
-<div class=" my-5">
-    <div class="text-center mb-4">
+<div class="">
+    <div class="text-center mb-4 m-2">
       <h2 class="fw-bold">What Our Customers are<br> Saying About Us</h2>
     </div>
       <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row justify-content-center p-2">
-            <div class="col-md-4">
+            <div class="col-md-3 m-2">
               <div class="card shadow border-0 text-center h-100 rounded-3">
                 <div class="card-body">
                   <div class="testimonial-quote fs-1 text-danger">❝</div>
                   <p class="card-text mb-3">
                     "Techtrole’s strategies transformed my small tourism business in A.P. Their local insights and global expertise were invaluable."
                   </p>
-                  <h5 class="fw-bold mt-3">~Kumar.</h5>
+                  <h5 class="fw-bold mt-3 text-end">~Kumar.</h5>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3 m-2">
               <div class="card shadow border-0 text-center h-100 rounded-3">
                 <div class="card-body">
                   <div class="testimonial-quote fs-1 text-danger">❝</div>
                   <p class="card-text mb-3">
                     "As a startup in Kerala, we needed guidance. Techtrole provided tailored solutions that helped us."
                   </p>
-                  <h5 class="fw-bold mt-3">~Yugendhar.</h5>
+                  <h5 class="fw-bold mt-3 text-end">~Yugendhar.</h5>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3 m-2">
               <div class="card shadow border-0 text-center h-100 rounded-3">
                 <div class="card-body">
                   <div class="testimonial-quote fs-1 text-danger">❝</div>
                   <p class="card-text mb-3">
                     "I never imagined my handmade crafts from Andhra Pradesh could reach such a wide audience, Thank you,"
                   </p>
-                  <h5 class="fw-bold mt-3">~Daveedu.</h5>
+                  <h5 class="fw-bold mt-3 text-end">~Daveedu.</h5>
                 </div>
               </div>
             </div>
@@ -702,36 +730,36 @@
         </div>
           <div class="carousel-item">
           <div class="row justify-content-center p-2">
-            <div class="col-md-4">
+            <div class="col-md-3 m-2">
               <div class="card shadow border-0 text-center h-100 rounded-3">
                 <div class="card-body">
                   <div class="testimonial-quote fs-1 text-danger">❝</div>
                   <p class="card-text mb-3">
                     "As a startup in Kerala, we needed guidance. Techtrole provided tailored solutions that helped us."
                   </p>
-                  <h5 class="fw-bold mt-3">~Yugendhar.</h5>
+                  <h5 class="fw-bold mt-3 text-end">~Yugendhar.</h5>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3 m-2">
               <div class="card shadow border-0 text-center h-100 rounded-3">
                 <div class="card-body">
                   <div class="testimonial-quote fs-1 text-danger">❝</div>
                   <p class="card-text mb-3">
                     "Thanks to Techtrole strategy, our online presence has grown significantly in just a few months."
                   </p>
-                  <h5 class="fw-bold mt-3">Deepa Mohan</h5>
+                  <h5 class="fw-bold mt-3 text-end">~Deepa Mohan</h5>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3 m-2">
               <div class="card shadow border-0 text-center h-100 rounded-3">
                 <div class="card-body">
                   <div class="testimonial-quote fs-1 text-danger">❝</div>
                   <p class="card-text mb-3">
                     "The solutions from Techtrole were tailored perfectly to our unique needs, boosting our revenue."
                   </p>
-                  <h5 class="fw-bold mt-3">Arjun Verma</h5>
+                  <h5 class="fw-bold mt-3 text-end">~Arjun Verma</h5>
                 </div>
               </div>
             </div>
@@ -782,27 +810,43 @@
             </div>
         </div>
   <script>
-    const imageUrls = [
-        "./Icons/WE Experts/Banking.png",
-        "./Icons/WE Experts/Education.png",
-        "./Icons/WE Experts/Goods-n-Distribution.png",
-        "./Icons/WE Experts/Healthcare.png",
-        "./Icons/WE Experts/Manufacturing.png",
-        "./Icons/WE Experts/Life-Sciences.png",,
-        "./Icons/WE Experts/Travel-n-Logistics.png"
-        
+    const image = [
+        { url: "./Icons/WE Experts/Banking.png", name: "Banking" },
+        { url: "./Icons/WE Experts/Education.png", name: "Education" },
+        { url: "./Icons/WE Experts/Goods-n-Distribution.png", name: "Goods & Distribution" },
+        { url: "./Icons/WE Experts/Healthcare.png", name: "Healthcare" },
+        { url: "./Icons/WE Experts/Life-Sciences.png", name: "Life Sciences" },
+        { url: "./Icons/WE Experts/Manufacturing.png", name: "Manufacturing" },
+        { url: "./Icons/WE Experts/Travel-n-Logistics.png", name: "Travel & Logistics" }
     ];
 
     const scrollWrapper = document.getElementById('scroll-wrapper');
+
+    // Number of times the images should repeat (500 iterations)
     const iterations = 500;
+
+    // Loop through and add the cards to the wrapper
     for (let i = 0; i < iterations; i++) {
-        imageUrls.forEach((url) => {
+        image.forEach((image) => {
+            // Create the card container
+            const card = document.createElement('div');
+            card.classList.add('card1');
+
+            // Create the image element
             const img = document.createElement('img');
-            img.src = url;
-            img.alt = `Image ${i + 1}`;
-            img.style.marginRight = '20px';
-            img.style.height = '200px';
-            scrollWrapper.appendChild(img);
+            img.src = image.url;
+            img.alt = image.name;
+
+            // Create the image name element
+            const name = document.createElement('p');
+            name.textContent = image.name;
+
+            // Append the image and name to the card
+            card.appendChild(img);
+            card.appendChild(name);
+
+            // Append the card to the scroll wrapper
+            scrollWrapper.appendChild(card);
         });
     }
 
