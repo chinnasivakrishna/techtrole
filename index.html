@@ -328,30 +328,83 @@
             text-align: center;
             margin-bottom: 40px;
         }
+
         .plan-card {
-            height: 400px;
-            width: 100%;
-            border: 1px solid #ddd;
+            background-color: #273746;
+            color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
             text-align: center;
-            background-color: white;
-            position: relative;
-            margin-bottom: 10px;
-            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
         }
+
         .plan-card h5 {
+            background-color: #f1c40f;
+            color: #273746;
+            padding: 10px;
             font-size: 18px;
             font-weight: bold;
         }
-        .plan-card p {
-            color: #6c757d;
+
+        .plan-card.secondary h5 {
+            background-color: #2980b9;
+            color: white;
         }
-        .plan-card .btn {
-            position: absolute;
-            bottom: 10px;
-            margin-left: -45px;
+
+        .plan-card .price {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        .plan-card .per-month {
+            font-size: 14px;
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .plan-card .per-year {
+            font-size: 14px;
+            color: white;
+        }
+
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            background-color: #34495e;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .plan-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #273746;
+        }
+
+        .plan-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .btn-custom {
+            background-color: #f1c40f;
+            color: #273746;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .plan-card.secondary .btn-custom {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            opacity: 0.9;
         }
 
         .contact_footer{
@@ -660,34 +713,40 @@
 <div class="growth-plan-section mb-4">
   <h2 class="growth-plan-title">Choose Your Business Growth Plan</h2>
 
-  <div class="row justify-content-center">
-      <div class="col-md-4">
-          <div class="plan-card">
-              <h5>Primary Base Plan</h5>
-              <p>Your very own dedicated graphic designer</p>
-              <ul class="list-unstyled">
-                  <li>180 Social Media Posts</li>
-                  <li>50 Small Promotion Videos</li>
-              </ul>
-              <a href="#" class="btn btn-dark">Know More</a>
-          </div>
-      </div>
-      <div class="col-md-4">
-          <div class="plan-card">
-            
-              <h5>Secondary Base Plan</h5>
-              
-              <p>Your very own dedicated graphic designer</p>
-              <ul class="list-unstyled">
-                  <li>180 Social Media Posts</li>
-                  <li>50 Small Promotion Videos</li>
-                  <li>+</li>
-                  <li> 25 Event Videos</li>
-              </ul>
-              <a href="#" class="btn btn-dark text-center">Know More</a>
-          </div>
-      </div>
-  </div>
+  <div class="container py-5">
+    <div class="row justify-content-center g-4">
+        <!-- Primary Plan -->
+        <div class="col-md-4">
+            <div class="plan-card">
+                <h5>PRIMARY</h5>
+                <p class="price">₹ 5000</p>
+                <p class="per-month">PER MONTH</p>
+                <p class="per-year">₹ 60,000 PER YEARLY</p>
+                <ul class="list-unstyled">
+                    <li>180 Social Media Posts</li>
+                    <li>50 Small Promotional Videos</li>
+                </ul>
+                <a href="#" class="btn btn-custom">Know More</a>
+            </div>
+        </div>
+
+        <!-- Secondary Plan -->
+        <div class="col-md-4">
+            <div class="plan-card secondary">
+                <h5>SECONDARY</h5>
+                <p class="price">₹ 5833</p>
+                <p class="per-month">PER MONTH</p>
+                <p class="per-year">₹ 70,000 PER YEARLY</p>
+                <ul class="list-unstyled">
+                    <li>180 Social Media Posts</li>
+                    <li>50 Small Promotional Videos</li>
+                    <li>25 Event Videos</li>
+                </ul>
+                <a href="#" class="btn btn-custom">Know More</a>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 <div class="">
     <div class="text-center mb-4 m-2">
