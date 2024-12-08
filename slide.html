@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Horizontal Scroll</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide the overflow to prevent scrollbars */
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow: hidden;
+            width: 100vw; /* Make it fit the screen width */
+        }
+
+        .scroll-wrapper {
+            display: flex;
+            animation: scroll 200s linear infinite; /* Increased duration for slower scroll */
+        }
+
+        .scroll-wrapper img {
+            margin-right: 20px; /* Margin between images */
+            height: 200px; /* Fixed height for images */
+        }
+
+        /* Keyframes for infinite scrolling */
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="scroll-container">
+    <div class="scroll-wrapper" id="scroll-wrapper">
+        <!-- Images will be dynamically inserted here using JavaScript -->
+    </div>
+</div>
+
+<script>
+    // Define the 5 image URLs
+    const imageUrls = [
+        "https://via.placeholder.com/150/ff7f7f", // Image 1
+        "https://via.placeholder.com/150/7f7fff", // Image 2
+        "https://via.placeholder.com/150/7fff7f", // Image 3
+        "https://via.placeholder.com/150/ffff7f", // Image 4
+        "https://via.placeholder.com/150/ff7fff"  // Image 5
+    ];
+
+    const scrollWrapper = document.getElementById('scroll-wrapper');
+
+    // Number of times the images should repeat (500 iterations)
+    const iterations = 500;
+
+    // Loop through and add the images to the wrapper
+    for (let i = 0; i < iterations; i++) {
+        imageUrls.forEach((url) => {
+            const img = document.createElement('img');
+            img.src = url;
+            img.alt = `Image ${i + 1}`;
+            img.style.marginRight = '20px'; // Set margin between images
+            img.style.height = '200px'; // Set image height
+            scrollWrapper.appendChild(img);
+        });
+    }
+</script>
+
+</body>
+</html>

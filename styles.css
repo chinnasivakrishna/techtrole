@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevents scrolling of the body */
+}
+
+.scroll-container {
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Hides the overflow */
+    position: relative;
+}
+
+.scroll-content {
+    display: flex; /* Align items in a row */
+    animation: scroll 20s linear infinite; /* Animation for scrolling */
+}
+
+.scroll-item {
+    min-width: 100vw; /* Each item takes full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: lightblue; /* Background color for visibility */
+    border: 1px solid #000; /* Border for visibility */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move left by 50% (half of the total width) */
+    }
+}
