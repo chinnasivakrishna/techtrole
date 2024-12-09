@@ -53,7 +53,6 @@
 
     .content {
       position: relative;
-      z-index: 1;
       text-align: center;
       padding-top: 20vh;
     }
@@ -148,7 +147,6 @@
             justify-content: center;
             transform: rotateY(180deg);
             position: absolute;
-            z-index: 1;
         }
         .rotate-left-back,
         .rotate-right-back {
@@ -162,7 +160,6 @@
         .card-back-wrapper {
             position: absolute;
             transform: translateZ(50px);
-            z-index: 10;
         }
         .rotate-left:hover .card-inner {
             transform: rotateY(-180deg);
@@ -484,7 +481,8 @@
                         </div>
                         <div class="card-back rotate-left-back">
                             <div class="card-back-wrapper">
-                                <button class="btn btn-primary">Click Here</button>
+                                <a href="./services.html" class="btn btn-primary">Click Here</a>
+
                             </div>
                         </div>
                     </div>
