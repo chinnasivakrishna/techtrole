@@ -7,6 +7,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/icomoon/style.css">
@@ -35,7 +36,6 @@
       overflow: hidden; /* Confine the black skew background */
       color: white;
       text-align: center;
-      padding: 20px;
       height: 350px;
     }
 
@@ -45,8 +45,8 @@
       bottom: 0;
       right: 0;
       left: 0;
-      height: 56%;
-      background-color: rgb(97, 97, 97);
+      height: 60%;
+      background-color: #273746;
       transform: skewY(-10deg);
       transform-origin: top right;
       z-index: 1;
@@ -78,7 +78,6 @@
     .plans .pricing-card .price {
       font-size: 2.5rem;
       font-weight: bold;
-      margin-bottom: 10px;
       position: relative;
       z-index: 2;
     }
@@ -86,7 +85,7 @@
     .plans .pricing-card .sub-price,
     .pricing-card .yearly-price {
       font-size: 1rem;
-      margin-bottom: 15px;
+      margin-bottom: 7px;
       position: relative;
       z-index: 2;
     }
@@ -151,6 +150,7 @@
       padding: 20px;
       background-color: #f8f9fa;
       border-radius: 15px;
+      margin-left: 140px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, background-color 0.3s ease;
       text-align: center;
@@ -174,12 +174,20 @@
       margin-bottom: 10px;
     }
     /* Scoped Styles for Pricing Section */
-.pricing-section .pricing-container {
+    .pricing-container {
+  margin-left: 70px;
+  width: 300px;
+  position: relative;
+  overflow: visible; /* Ensure button outside is visible */
+}
+.second{
+  margin-left: 150px;
+  width: 300px;
   position: relative;
   overflow: visible; /* Ensure button outside is visible */
 }
 
-.pricing-section .pricing-card {
+ .pricing-card {
   position: relative;
   border-radius: 15px;
   overflow: hidden; /* Confine the black skew background */
@@ -189,20 +197,20 @@
   height: 350px;
 }
 
-.pricing-section .pricing-card::after {
+ .pricing-card::after {
   content: '';
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  height: 56%;
-  background-color: rgb(97, 97, 97);
-  transform: skewY(-10deg);
+  height: 66%;
+  background-color: #273746;
+  transform: skewY(-20deg);
   transform-origin: top right;
   z-index: 1;
 }
 
-.pricing-section .header {
+ .header {
   font-size: 1.2rem;
   font-weight: bold;
   background-color: black;
@@ -216,23 +224,22 @@
   z-index: 2; /* Ensure the header is above other elements */
 }
 
-.pricing-section .pricing-card.primary {
+ .pricing-card.primary {
   background: linear-gradient(to bottom right, #f1c40f, #d4ac0d);
 }
 
-.pricing-section .pricing-card.secondary {
+ .pricing-card.secondary {
   background: linear-gradient(to bottom right, #3498db, #1e7ac6);
 }
 
-.pricing-section .pricing-card .price {
+ .pricing-card .price {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
   position: relative;
   z-index: 2;
 }
 
-.pricing-section .pricing-card .sub-price,
+ .pricing-card .sub-price,
 .pricing-card .yearly-price {
   font-size: 1rem;
   margin-bottom: 15px;
@@ -240,7 +247,7 @@
   z-index: 2;
 }
 
-.pricing-section .pricing-card .features {
+ .pricing-card .features {
   font-size: 0.9rem;
   margin-bottom: 20px;
   position: relative;
@@ -248,22 +255,22 @@
   padding: 0; /* Remove padding from the features container */
 }
 
-.pricing-section .pricing-card.primary .features hr,
+ .pricing-card.primary .features hr,
 .pricing-card.secondary .features hr {
   border: 0; /* Reset the default border */
   height: 1px; /* Set a specific height for the line */
   background-color: #fff; /* Set color to white for better visibility */
 }
 
-.pricing-section .pricing-card.primary .features hr {
+ .pricing-card.primary .features hr {
   background-color: #d4ac0d; /* Specific color for primary card */
 }
 
-.pricing-section .pricing-card.secondary .features hr {
+ .pricing-card.secondary .features hr {
   background-color: #038eff; /* Specific color for secondary card */
 }
 
-.pricing-section .buy-btn {
+ .buy-btn {
   color: white;
   font-weight: bold;
   border: 2px solid transparent;
@@ -277,7 +284,7 @@
   z-index: 3; /* Ensure button is above everything */
 }
 
-.pricing-section .buy-btn:hover {
+ .buy-btn:hover {
   background-color: white;
   color: black;
 }
@@ -285,11 +292,10 @@
 .plan-cards .card-container {
       position: relative;
       display: flex;
-      width: 470px; /* Adjust the width of each card */
-      height: 170px; /* Fixed height */
+      width: 400px; /* Adjust the width of each card */
+      height: 200px; /* Fixed height */
       border-radius: 0 0 0 40px;
       overflow: hidden;
-      margin-right: 10px; /* Space between cards */
     }
 
     /* Create a cross line dividing the left and right sections */
@@ -300,7 +306,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(100deg, transparent 37%, rgb(60, 60, 60) 29%, rgb(97, 97, 97) 100%, transparent 51%);
+      background: linear-gradient(100deg, transparent 39%, #273746 35%, #273746 100%, transparent 51%);
       pointer-events: none;
       z-index: 1; /* Make sure the line is under text */
     }
@@ -408,10 +414,10 @@
             min-height: 100vh;
             margin: 0;
             display: flex;
-            gap: 20px;
+            gap: 100px;
         }
-        .all-plans .card1, .all-plans .card2 {
-            width: 300px;
+        .all-plans .card1 {
+            width: 350px;
             background-color: #43a047;
             color: white;
             border: none;
@@ -420,7 +426,7 @@
             position: relative;
         }
         .all-plans .card2 {
-            width: 300px;
+            width: 350px;
             background-color: #aa6a3d;
             color: white;
             border: none;
@@ -429,7 +435,7 @@
             position: relative;
         }
         .all-plans .card3 {
-            width: 300px;
+            width: 350px;
             background-color: rgb(175, 82, 175);
             color: white;
             border: none;
@@ -577,15 +583,15 @@
   </style>
 </head>
 <body>
-  <div class="container-fluid d-flex justify-content-center align-items-center plans" style="overflow: visible;">
-    <div class="row g-4 mt-5" style="overflow: visible;">
+  <div class="container-fluid d-flex plans" style="overflow: visible;">
+    <div class="row g-4 m-5 justify-content-between col-md-6" style="overflow: visible;">
       <!-- Primary Card -->
-      <div class="col-md-6 mt-5">
+      <div class="col-md-6">
         <div class="pricing-container">
           <div class="header">PRIMARY</div>
           <div class="pricing-card primary">
             
-            <div class="price">₹5000</div>
+            <div class="price mt-2">₹5000</div>
             <div class="sub-price">PER MONTH</div>
             <div class="yearly-price pb-4">₹60,000 PER YEARLY</div>
             <div class="features">
@@ -599,8 +605,8 @@
       </div>
 
       <!-- Secondary Card -->
-      <div class="col-md-6 mt-5">
-        <div class="pricing-container">
+      <div class="col-md-6">
+        <div class="pricing-container second">
           <div class="header">SECONDARY</div>
           <div class="pricing-card secondary">
             
@@ -620,8 +626,9 @@
       </div>
     </div>
     
+
     <!-- Details and Note Section -->
-    <div class="details-note-container mx-5 mt-5">
+    <div class="details-note-container m-4">
       <!-- Details Div -->
       <div class="card details mt-5">
         <h4 class="card-title">Details</h4>
@@ -715,36 +722,36 @@
         <div class="empty p-5"></div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
-                <i class="text-success bi bi-check-circle-fill"></i>
-                <span>180 Social Media Posts</span>
+                <i class="text-success bi bi-check-circle-fill "></i>
+                <span class="px-4">180 Social Media Posts</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-danger bi bi-x-circle-fill"></i>
-                <span>50 Small Proted Videos</span>
+                <span class="px-4">50 Small Proted Videos</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-danger bi bi-x-circle-fill"></i>
-                <span>25 Event Videos</span>
+                <span class="px-4">25 Event Videos</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Basic Logo</span>
+                <span class="px-4">Basic Logo</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Basic Logo Animation</span>
+                <span class="px-4">Basic Logo Animation</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Catalogue (upto 5 pages)</span>
+                <span class="px-4">Catalogue (upto 5 pages)</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Static Website</span>
+                <span class="px-4">Static Website</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Service</span>
+                <span class="px-4">Service</span>
             </li>
         </ul>
         <div class="cost py-2">
@@ -753,7 +760,7 @@
         </div>
         <div class="month mb-5">
             <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
-            <h4>₹60,000</h4>
+            <h6>₹60,000</h6>
         </div>
     </div>
         <a href="#" class="btn btn-buy btn-success">BUY NOW</a>
@@ -764,36 +771,36 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>180 Social Media Posts</span>
+                <span class="px-4">180 Social Media Posts</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
 
-                <span>50 Small Proted Videos</span>
+                <span class="px-4">50 Small Proted Videos</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-danger bi bi-x-circle-fill"></i>
-                <span>25 Event Videos</span>
+                <span class="px-4">25 Event Videos</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Basic Logo</span>
+                <span class="px-4">Basic Logo</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Basic Logo Animation</span>
+                <span class="px-4">Basic Logo Animation</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Catalogue (upto 5 pages)</span>
+                <span class="px-4">Catalogue (upto 5 pages)</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Static Website</span>
+                <span class="px-4">Static Website</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Service</span>
+                <span class="px-4">Service</span>
             </li>
         </ul>
         <div class="cost py-2">
@@ -802,7 +809,7 @@
         </div>
         <div class="month mb-5">
             <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
-            <h4>₹80,000</h4>
+            <h6>₹80,000</h6>
         </div>
     </div>
         <a href="#" class="btn btn-buy ">BUY NOW</a>
@@ -813,35 +820,35 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>180 Social Media Posts</span>
+                <span class="px-4">180 Social Media Posts</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>50 Small Proted Videos</span>
+                <span class="px-4">50 Small Proted Videos</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>25 Event Videos</span>
+                <span class="px-4">25 Event Videos</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Basic Logo</span>
+                <span class="px-4">Basic Logo</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Basic Logo Animation</span>
+                <span class="px-4">Basic Logo Animation</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Catalogue (upto 5 pages)</span>
+                <span class="px-4">Catalogue (upto 5 pages)</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Static Website</span>
+                <span class="px-4">Static Website</span>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
                 <i class="text-success bi bi-check-circle-fill"></i>
-                <span>Service</span>
+                <span class="px-4">Service</span>
             </li>
         </ul>
         <div class="cost py-2">
@@ -850,7 +857,7 @@
         </div>
         <div class="month mb-5">
             <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
-            <h4>₹90,000</h4>
+            <h6>₹90,000</h6>
         </div>
     </div>
         <a href="#" class="btn btn-buy btn-success">BUY NOW</a>
