@@ -345,83 +345,123 @@
             text-align: center;
         }
 
-        .plan-card {
-            background-color: #273746;
-            color: white;
-            border-radius: 10px;
-            text-align: center;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-        }
+        .plans .pricing-container {
+      position: relative;
+      overflow: visible; /* Ensure button outside is visible */
+    }
 
-        .plan-card h5 {
-            background-color: #f1c40f;
-            color: #273746;
-            padding: 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
+    .plans .pricing-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden; /* Confine the black skew background */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      height: 350px;
+    }
 
-        .plan-card.secondary h5 {
-            background-color: #2980b9;
-            color: white;
-        }
+    .plans .pricing-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 56%;
+      background-color: rgb(97, 97, 97);
+      transform: skewY(-10deg);
+      transform-origin: top right;
+      z-index: 1;
+    }
 
-        .plan-card .price {
-            font-size: 36px;
-            font-weight: bold;
-            margin: 10px 0 5px;
-        }
+    .plans .header {
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: black;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 10px 10px 0 0; /* Rounded bottom corners for better appearance */
+      position: absolute; /* Make the header absolute */
+      top: -10px; /* Align it with the top border of the card */
+      left: 50%; /* Center the header horizontally */
+      transform: translateX(-50%); /* Center alignment */
+      z-index: 2; /* Ensure the header is above other elements */
 
-        .plan-card .per-month {
-            font-size: 14px;
-            color: #f1c40f;
-            font-weight: bold;
-        }
+    }
 
-        .plan-card .per-year {
-            font-size: 14px;
-            color: white;
-        }
+    .plans .pricing-card.primary {
+      background: linear-gradient(to bottom right, #f1c40f, #d4ac0d);
+    }
 
-        .plan-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            background-color: #34495e;
-            border-radius: 0 0 10px 10px;
-        }
+    .plans .pricing-card.secondary {
+      background: linear-gradient(to bottom right, #3498db, #1e7ac6);
+    }
 
-        .plan-card ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid #273746;
-        }
+    .plans .pricing-card .price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
 
-        .plan-card ul li:last-child {
-            border-bottom: none;
-        }
+    .plans .pricing-card .sub-price,
+    .pricing-card .yearly-price {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 2;
+    }
 
-        .btn-custom {
-            background-color: #f1c40f;
-            color: #273746;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
+    .plans .pricing-card .features {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      padding: 0; /* Remove padding from the features container */
+    }
 
-        .plan-card.secondary .btn-custom {
-            background-color: #2980b9;
-            color: white;
-        }
+    /* Horizontal Line Styling */
+    .plans .pricing-card.primary .features hr,
+    .pricing-card.secondary .features hr {
+      border: 0; /* Reset the default border */
+      height: 1px; /* Set a specific height for the line */
+      background-color: #fff; /* Set color to white for better visibility */
+    }
 
-        .btn-custom:hover {
-            opacity: 0.9;
-        }
+    .plans .pricing-card.primary .features hr {
+      background-color: #d4ac0d; /* Specific color for primary card */
+    }
+
+    .plans .pricing-card.secondary .features hr {
+      background-color: #038eff; /* Specific color for secondary card */
+    }
+
+    .plans .buy-btn {
+      color: white;
+      font-weight: bold;
+      border: 2px solid transparent;
+      border-radius: 0 0 20px 20px;
+      padding: 10px 10px;
+      transition: 0.3s ease;
+      position: absolute;
+      bottom: -25px; /* Half the button outside the card */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3; /* Ensure button is above everything */
+    }
+
+    .plans .buy-btn {
+      border-color: #f39c12;
+    }
+
+    .plans .buy-btn {
+      border-color: #2980b9;
+    }
+
+    .plans .buy-btn:hover {
+      background-color: white;
+      color: black;
+    }
 
         .contact_footer{
     position: relative;
@@ -654,40 +694,49 @@
 <div class="growth-plan-section mb-5">
   <h2 class="growth-plan-title mt-5">Choose Your Business Growth Plan</h2>
 
-  <div class="container pt-4">
-    <div class="row justify-content-center g-4">
-        <!-- Primary Plan -->
-        <div class="col-md-4">
-            <div class="plan-card">
-                <h5>PRIMARY</h5>
-                <p class="price">₹ 5000</p>
-                <p class="per-month">PER MONTH</p>
-                <p class="per-year">₹ 60,000 PER YEARLY</p>
-                <ul class="list-unstyled">
-                    <li>180 Social Media Posts</li>
-                    <li>50 Small Promotional Videos</li>
-                </ul>
-                <a href="#" class="btn btn-custom">Know More</a>
+  <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100 plans" style="overflow: visible;">
+    <div class="row g-4" style="overflow: visible;">
+      <!-- Primary Card -->
+      <div class="col-md-6">
+        <div class="pricing-container">
+          <div class="header">PRIMARY</div>
+          <div class="pricing-card primary">
+            
+            <div class="price">₹5000</div>
+            <div class="sub-price">PER MONTH</div>
+            <div class="yearly-price pb-4">₹60,000 PER YEARLY</div>
+            <div class="features">
+              <p>180 Social Media Posts</p>
+              <hr />
+              <p>50 Small Promotional Videos</p>
             </div>
+          </div>
+          <a href="" class="btn btn-warning buy-btn col-md-10 primary">BUY NOW</a>
         </div>
+      </div>
 
-        <!-- Secondary Plan -->
-        <div class="col-md-4">
-            <div class="plan-card secondary">
-                <h5>SECONDARY</h5>
-                <p class="price">₹ 5833</p>
-                <p class="per-month">PER MONTH</p>
-                <p class="per-year">₹ 70,000 PER YEARLY</p>
-                <ul class="list-unstyled">
-                    <li>180 Social Media Posts</li>
-                    <li>50 Small Promotional Videos</li>
-                    <li>25 Event Videos</li>
-                </ul>
-                <a href="#" class="btn btn-custom">Know More</a>
+      <!-- Secondary Card -->
+      <div class="col-md-6">
+        <div class="pricing-container">
+          <div class="header">SECONDARY</div>
+          <div class="pricing-card secondary">
+            
+            <div class="price">₹5833</div>
+            <div class="sub-price">PER MONTH</div>
+            <div class="yearly-price pb-4">₹70,000 PER YEARLY</div>
+            <div class="features">
+              <p>180 Social Media Posts</p>
+              <hr class="col-12"/>
+              <p>50 Small Promotional Videos</p>
+              <hr />
+              <p>25 Event Videos</p>
             </div>
+          </div>
+          <a href="" class="btn btn-primary buy-btn col-md-10">BUY NOW</a>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </div>
 <div class="my-5">
     <div class="text-center mb-4 my-5">
