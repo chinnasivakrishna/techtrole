@@ -6,310 +6,232 @@
     <title>Primary Business Pack</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-     
-        .all-plans  {
-            background-color: #f5f5f5;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-        }
-        .all-plans .card1, .all-plans .card2 {
-            width: 300px;
-            background-color: #43a047;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            text-align: center;
-            position: relative;
-        }
-        .all-plans .card2 {
-            width: 300px;
-            background-color: #aa6a3d;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            text-align: center;
-            position: relative;
-        }
-        .all-plans .card3 {
-            width: 300px;
-            background-color: rgb(175, 82, 175);
-            color: white;
-            border: none;
-            border-radius: 20px;
-            text-align: center;
-            position: relative;
-        }
-        .all-plans .card1 .header {
-            font-size: 1.2rem;
-            font-weight: bold;
-            background-color: #43a047;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px 20px 0 0;
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            width: 220px;
-        }
-        .all-plans .card2 .header {
-            font-size: 1.2rem;
-            font-weight: bold;
-            background-color: #aa6a3d;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px 20px 0 0;
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            width: 220px;
-        }
-
-        .all-plans .card3 .header {
-            font-size: 1.2rem;
-            font-weight: bold;
-            background-color: rgb(175, 82, 175);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px 20px 0 0;
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            width: 220px;
-        }
-        .all-plans .list-group-item {
-            background-color: rgb(65, 57, 57);
-            color: white;
-            border: none;
-        }
-        .all-plans .list-group-item i {
-            font-size: 1.2rem;
-            margin-right: 10px;
-        }
-        .all-plans .price {
-            font-size: 1.5rem;
-            background-color: black;
-            color: white;
-            border-radius: 50px;
-        }
-        .all-plans .cost {
-            background-color: rgb(65, 57, 57);
-            border-radius: 0 0 20px 20px;
-        }
-        .all-plans .card1 .btn-buy {
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 0 0 20px 20px;
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            width: 220px;
-        }
-
-        .all-plans .card2 .btn-buy {
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 0 0 20px 20px;
-            position: absolute;
-            bottom: -20px;
-            background-color: #aa6a3d;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            width: 220px;
-        }
-
-        .all-plans .card3 .btn-buy {
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 0 0 20px 20px;
-            position: absolute;
-            bottom: -20px;
-            background-color: rgb(175, 82, 175);
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            width: 220px;
-        }
-        
-        .all-plans hr {
-      border: 0; /* Remove default border */
-      height: 2px; /* Height for the line */
-      background-color: #fff; /* White color */
-      width: 100%; /* Make the line shorter than full width */
-      margin: 10px 0; /* Space above and below */
-      position: relative;
-      z-index: 2; /* Ensure the hr stays above the background */
-    }
-    .empty{
-            background-color: rgb(65, 57, 57);
-            border-radius: 20px 20px 0 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="all-plans">
-        <div class="card1">
-            <div class="header">PRIMARY BUSINESS PACK</div>
-            <div class="empty p-5"></div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>180 Social Media Posts</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-danger bi bi-x-circle-fill"></i>
-                    <span>50 Small Proted Videos</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-danger bi bi-x-circle-fill"></i>
-                    <span>25 Event Videos</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Basic Logo</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Basic Logo Animation</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Catalogue (upto 5 pages)</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Static Website</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Service</span>
-                </li>
-            </ul>
-            <div class="cost py-2">
-            <div class="price p-2 mx-5">
-                <h3 class="text-warning">₹5000</h3>
+    </head>
+    <body>
+    <div class="container-fluid d-flex plans" style="overflow: visible;">
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 col-md-8 col-sm-12 mt-5">
+            <div class="pricing-container">
+              <div class="header">PRIMARY</div>
+              <div class="pricing-card primary">
+                <div class="price mt-2">₹5000</div>
+                <div class="sub-price">PER MONTH</div>
+                <div class="yearly-price pb-4">₹60,000 PER YEARLY</div>
+                <div class="features">
+                  <p>180 Social Media Posts</p>
+                  <hr />
+                  <p>50 Small Promotional Videos</p>
+                </div>
+              </div>
+              <a href="" class="btn btn-warning buy-btn col-md-10 primary">BUY NOW</a>
             </div>
-            <div class="month mb-5">
-                <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
-                <h4>₹60,000</h4>
+          </div>
+      
+          <div class="col-lg-6 col-md-8 col-sm-12 mt-5">
+            <div class="pricing-container second">
+              <div class="header">SECONDARY</div>
+              <div class="pricing-card secondary">
+                <div class="price">₹5833</div>
+                <div class="sub-price">PER MONTH</div>
+                <div class="yearly-price pb-4">₹70,000 PER YEARLY</div>
+                <div class="features">
+                  <p>180 Social Media Posts</p>
+                  <hr class="col-12"/>
+                  <p>50 Small Promotional Videos</p>
+                  <hr />
+                  <p>25 Event Videos</p>
+                </div>
+              </div>
+              <a href="" class="btn btn-primary buy-btn col-md-10">BUY NOW</a>
             </div>
+          </div>
         </div>
-            <a href="#" class="btn btn-buy btn-success">BUY NOW</a>
+      
+        <div class="details-note-container d-flex flex-column align-items-center gap-4 mt-5">
+          <div class="card details mt-5">
+            <h4 class="card-title">Details</h4>
+            <p>3 Posts per Week (Except on festival seasons)</p>
+            <p>1 Small Promotional Video per Week</p>
+            <p>2 Event videos per month<br> (Trimming/Slide Show & Basic Effects)</p>
+          </div>
+      
+          <div class="card note">
+            <h4 class="card-title">Note</h4>
+            <p>Event video output is up to 5 minutes</p>
+          </div>
         </div>
-        <div class="card2">
-            <div class="header">Secondary BUSINESS PACK</div>
-            <div class="empty p-5"></div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>180 Social Media Posts</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-
-                    <span>50 Small Proted Videos</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-danger bi bi-x-circle-fill"></i>
-                    <span>25 Event Videos</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Basic Logo</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Basic Logo Animation</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Catalogue (upto 5 pages)</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Static Website</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Service</span>
-                </li>
-            </ul>
-            <div class="cost py-2">
-            <div class="price p-2 mx-5">
-                <h3 class="text-warning">₹6667</h3>
-            </div>
-            <div class="month mb-5">
-                <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
-                <h4>₹80,000</h4>
-            </div>
-        </div>
-            <a href="#" class="btn btn-buy ">BUY NOW</a>
-        </div>
-        <div class="card3">
-            <div class="header">ULTRA BUSINESS PACK</div>
-            <div class="empty p-5"></div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>180 Social Media Posts</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>50 Small Proted Videos</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>25 Event Videos</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Basic Logo</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Basic Logo Animation</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Catalogue (upto 5 pages)</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Static Website</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
-                    <i class="text-success bi bi-check-circle-fill"></i>
-                    <span>Service</span>
-                </li>
-            </ul>
-            <div class="cost py-2">
-            <div class="price p-2 mx-5">
-                <h3 class="text-warning">₹57600</h3>
-            </div>
-            <div class="month mb-5">
-                <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
-                <h4>₹90,000</h4>
-            </div>
-        </div>
-            <a href="#" class="btn btn-buy btn-success">BUY NOW</a>
-        </div>
-    </div>
+      </div>
+    </body>
+      <style>
+        .plans .pricing-container {
+          position: relative;
+        }
+      
+        .plans .pricing-card {
+          position: relative;
+          border-radius: 15px;
+          color: white;
+          text-align: center;
+          height: 350px;
+        }
+      
+        .plans .pricing-card::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          height: 60%;
+          background-color: #273746;
+          transform: skewY(-10deg);
+          transform-origin: top right;
+          z-index: 1;
+        }
+      
+        .plans .header {
+          font-size: 1.2rem;
+          font-weight: bold;
+          background-color: black;
+          color: white;
+          padding: 5px 15px;
+          border-radius: 10px 10px 0 0;
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+        }
+      
+        .plans .pricing-card.primary {
+          background: linear-gradient(to bottom right, #f1c40f, #d4ac0d);
+        }
+      
+        .plans .pricing-card.secondary {
+          background: linear-gradient(to bottom right, #3498db, #1e7ac6);
+        }
+      
+        .plans .pricing-card .price {
+          font-size: 2.5rem;
+          font-weight: bold;
+          position: relative;
+          z-index: 2;
+        }
+      
+        .plans .pricing-card .sub-price,
+        .plans .pricing-card .yearly-price {
+          font-size: 1rem;
+          margin-bottom: 7px;
+          position: relative;
+          z-index: 2;
+        }
+      
+        .plans .pricing-card .features {
+          font-size: 0.9rem;
+          margin-bottom: 20px;
+          position: relative;
+          z-index: 2;
+          padding: 0;
+        }
+      
+        .plans .pricing-card.primary .features hr,
+        .plans .pricing-card.secondary .features hr {
+          border: 0;
+          height: 1px;
+          background-color: #fff;
+        }
+      
+        .plans .pricing-card.primary .features hr {
+          background-color: #d4ac0d;
+        }
+      
+        .plans .pricing-card.secondary .features hr {
+          background-color: #038eff;
+        }
+      
+        .plans .buy-btn {
+          color: white;
+          font-weight: bold;
+          border: 2px solid transparent;
+          border-radius: 0 0 20px 20px;
+          padding: 10px;
+          transition: 0.3s ease;
+          position: absolute;
+          bottom: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 3;
+        }
+      
+        .plans .buy-btn.primary {
+          border-color: #f39c12;
+        }
+      
+        .plans .buy-btn.secondary {
+          border-color: #2980b9;
+        }
+      
+        .plans .buy-btn:hover {
+          background-color: white;
+          color: black;
+        }
+      
+        .plans .details-note-container .card {
+          padding: 20px;
+          width: 100%;
+          max-width: 400px;
+          background-color: #f8f9fa;
+          border-radius: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, background-color 0.3s ease;
+          text-align: center;
+        }
+      
+        .plans .details-note-container .card:hover {
+          transform: scale(1.05);
+        }
+      
+        .plans .details-note-container .details:hover .card-title {
+          color: blue;
+        }
+      
+        .plans .details-note-container .note:hover .card-title {
+          color: red;
+        }
+      
+        .plans .card-title {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+      
+        @media (max-width: 768px) {
+          .plans .pricing-card {
+            height: auto;
+            padding: 20px;
+          }
+      
+          .plans .pricing-card .price {
+            font-size: 2rem;
+          }
+      
+          .plans .pricing-card .sub-price,
+          .plans .pricing-card .yearly-price {
+            font-size: 0.9rem;
+          }
+      
+          .plans .details-note-container .card {
+            width: 100%;
+            max-width: none;
+          }
+      
+          .plans .buy-btn {
+            width: 100%;
+            position: static;
+            margin-top: 15px;
+          }
+        }
+      </style>
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
