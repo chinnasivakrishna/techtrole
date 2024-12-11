@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Cards</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/icomoon/style.css">
+
+    <link href="assets/img/favicon.png" rel="icon">
+
+    <meta name="keywords" content="vertex biosciences, vertex, biosciences, vertex poultry, vertex shrimp, vertex fish">
+    <meta name="description" content="Vertex Biosciences addresses some of the world's most pressing global challenges and continue to develop new solutions">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <link href="assets/aos/aos.css" rel="stylesheet">
+  <style>
+    .plans .pricing-container {
+      position: relative;
+      overflow: visible;
+    }
+
+    .plans .pricing-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      height: 350px;
+    }
+
+    .plans .pricing-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 60%;
+      background-color: #273746;
+      transform: skewY(-10deg);
+      transform-origin: top right;
+      z-index: 1;
+    }
+
+    .plans .header {
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: black;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 10px 10px 0 0;
+      position: absolute; 
+      top: -10px; 
+      left: 50%; 
+      transform: translateX(-50%);
+      z-index: 2; 
+
+    }
+
+    .plans .pricing-card.primary {
+      background: linear-gradient(to bottom right, #f1c40f, #d4ac0d);
+    }
+
+    .plans .pricing-card.secondary {
+      background: linear-gradient(to bottom right, #3498db, #1e7ac6);
+    }
+
+    .plans .pricing-card .price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plans .pricing-card .sub-price,
+    .pricing-card .yearly-price {
+      font-size: 1rem;
+      margin-bottom: 7px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plans .pricing-card .features {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      padding: 0; 
+    }
+
+    .plans .pricing-card.primary .features hr,
+    .pricing-card.secondary .features hr {
+      border: 0;
+      height: 1px;
+      background-color: #fff;
+    }
+
+    .plans .pricing-card.primary .features hr {
+      background-color: #d4ac0d;
+    }
+
+    .plans .pricing-card.secondary .features hr {
+      background-color: #038eff;
+    }
+
+    .plans .buy-btn {
+      color: white;
+      font-weight: bold;
+      border: 2px solid transparent;
+      border-radius: 0 0 20px 20px;
+      padding: 10px 10px;
+      transition: 0.3s ease;
+      position: absolute;
+      bottom: -25px; 
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+
+    .plans .buy-btn {
+      border-color: #f39c12;
+    }
+
+    .plans .buy-btn {
+      border-color: #2980b9;
+    }
+
+    .plans .buy-btn:hover {
+      background-color: white;
+      color: black;
+    }
+    .plans .details-note-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .plans .details-note-container .card {
+      padding: 20px;
+      width: 400px;
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      margin-left: 19%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-align: center;
+    }
+
+    .plans .details-note-container .card:hover {
+      transform: scale(1.1);
+    }
+
+    .plans .details-note-container .details:hover .card-title {
+      color: blue;
+    }
+
+    .plans .details-note-container .note:hover .card-title {
+      color: red;
+    }
+
+    .plans .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .pricing-container {
+  margin-left: 19%;
+  width: 300px;
+  position: relative;
+  overflow: visible;
+}
+.second{
+  margin-left: 40%;
+  width: 300px;
+  position: relative;
+  overflow: visible;
+}
+
+ .pricing-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  height: 350px;
+}
+
+ .pricing-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 66%;
+  background-color: #273746;
+  transform: skewY(-20deg);
+  transform-origin: top right;
+  z-index: 1;
+}
+
+ .header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+ .pricing-card.primary {
+  background: linear-gradient(to bottom right, #f1c40f, #d4ac0d);
+}
+
+ .pricing-card.secondary {
+  background: linear-gradient(to bottom right, #3498db, #1e7ac6);
+}
+
+ .pricing-card .price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+ .pricing-card .sub-price,
+.pricing-card .yearly-price {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+ .pricing-card .features {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+ .pricing-card.primary .features hr,
+.pricing-card.secondary .features hr {
+  border: 0;
+  height: 1px;
+  background-color: #fff;
+}
+
+ .pricing-card.primary .features hr {
+  background-color: #d4ac0d;
+}
+
+ .pricing-card.secondary .features hr {
+  background-color: #038eff;
+}
+
+ .buy-btn {
+  color: white;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 0 0 20px 20px;
+  padding: 10px 10px;
+  transition: 0.3s ease;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+ .buy-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.plan-cards .card-container {
+      position: relative;
+      display: flex;
+      width: 400px;
+      height: 200px;
+      border-radius: 0 0 0 40px;
+      overflow: hidden;
+    }
+
+    .plan-cards .card-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(100deg, transparent 39%, #273746 35%, #273746 100%, transparent 51%);
+      pointer-events: none;
+      z-index: 1; 
+    }
+
+    .plan-cards .left-section {
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plan-cards .right-section {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plan-cards .left-section h1,
+    .plan-cards .left-section p,
+    .plan-cards .right-section h5,
+    .plan-cards .right-section p {
+      color: white;
+      margin: 0;
+    }
+
+    .plan-cards .card-1 {
+      background-color: #d75c4e;
+    }
+    .plan-cards .card-1 h4 {
+      color: #d75c4e;
+    }
+
+    .plan-cards .card-2 {
+      background-color: #7d4cd5;
+    }
+
+    .plan-cards .card-2 h4{
+      color: #7d4cd5;
+    }
+
+
+    .plan-cards  h4{
+        padding: 5px;
+        margin-left: -45px;
+        padding-left: 25px;
+        margin-top: -10px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background-color: black;
+      border-radius: 0 10px 10px 0;
+    }
+
+   
+
+
+    .plan-cards .card-3 {
+      background-color: #f61b7f;
+    }
+
+    .plan-cards .card-3 h4{
+      color: #f61b7f;
+    }
+
+
+
+    .plan-cards  hr {
+      border: 0;
+      height: 2px;
+      background-color: #fff;
+      width: 100%;
+      margin: 10px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .plan-cards .centered-text {
+      position: relative;
+      z-index: 3;
+      margin-top: -10px;
+    }
+
+    .plan-cards .cards-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .all-plans  {
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            gap: 100px;
+        }
+        .all-plans .card1 {
+            width: 350px;
+            background-color: #43a047;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .all-plans .card2 {
+            width: 350px;
+            background-color: #aa6a3d;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .all-plans .card3 {
+            width: 350px;
+            background-color: rgb(175, 82, 175);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .all-plans .card1 .header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: #43a047;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px 20px 0 0;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            width: 220px;
+        }
+        .all-plans .card2 .header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: #aa6a3d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px 20px 0 0;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            width: 220px;
+        }
+
+        .all-plans .card3 .header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: rgb(175, 82, 175);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px 20px 0 0;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            width: 220px;
+        }
+        .all-plans .list-group-item {
+            background-color: rgb(65, 57, 57);
+            color: white;
+            border: none;
+        }
+        .all-plans .list-group-item i {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .all-plans .price {
+            font-size: 1.5rem;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+        }
+        .all-plans .cost {
+            background-color: rgb(65, 57, 57);
+            border-radius: 0 0 20px 20px;
+        }
+        .all-plans .card1 .btn-buy {
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            width: 220px;
+        }
+
+        .all-plans .card2 .btn-buy {
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            bottom: -20px;
+            background-color: #aa6a3d;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: white;
+            width: 220px;
+        }
+
+        .all-plans .card3 .btn-buy {
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            bottom: -20px;
+            background-color: rgb(175, 82, 175);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            width: 220px;
+        }
+        
+        .all-plans hr {
+      border: 0;
+      height: 2px;
+      background-color: #fff;
+      width: 100%;
+      margin: 10px 0;
+      position: relative;
+      z-index: 2;
+    }
+    .empty{
+            background-color: rgb(65, 57, 57);
+            border-radius: 20px 20px 0 0;
+        }
+
+
+        .contact_footer{
+    position: relative;
+    left: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 80px;
+    background-color: #5a4ade;
+}
+
+.footer{
+    background-color: #000;
+    position: relative; 
+    min-height: 30vh;
+}
+
+.footer_image{
+    width: 100%;
+    background-color: #FFF;
+}
+  </style>
+</head>
+<body>
+  <div class="container-fluid d-flex plans" style="overflow: visible;">
+    <div class="row g-4 m-5 justify-content-between col-md-6" style="overflow: visible;">
+      <div class="col-md-6 mt-5">
+        <div class="pricing-container">
+          <div class="header">PRIMARY</div>
+          <div class="pricing-card primary">
+            
+            <div class="price mt-2">₹5000</div>
+            <div class="sub-price">PER MONTH</div>
+            <div class="yearly-price pb-4">₹60,000 PER YEARLY</div>
+            <div class="features">
+              <p>180 Social Media Posts</p>
+              <hr />
+              <p>50 Small Promotional Videos</p>
+            </div>
+          </div>
+          <a href="" class="btn btn-warning buy-btn col-md-10 primary">BUY NOW</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-5">
+        <div class="pricing-container second">
+          <div class="header">SECONDARY</div>
+          <div class="pricing-card secondary">
+            
+            <div class="price">₹5833</div>
+            <div class="sub-price">PER MONTH</div>
+            <div class="yearly-price pb-4">₹70,000 PER YEARLY</div>
+            <div class="features">
+              <p>180 Social Media Posts</p>
+              <hr class="col-12"/>
+              <p>50 Small Promotional Videos</p>
+              <hr />
+              <p>25 Event Videos</p>
+            </div>
+          </div>
+          <a href="" class="btn btn-primary buy-btn col-md-10">BUY NOW</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="details-note-container m-5">
+      <div class="card details mt-5">
+        <h4 class="card-title">Details</h4>
+        <p>3 Posts per Week (Except on festival seasons)</p>
+        <p>1 Small Promotional Video per Week</p>
+        <p>2 Event videos per month<br> (Trimming/Slide Show & Basic Effects)</p>
+      </div>
+
+      <div class="card note">
+        <h4 class="card-title">Note</h4>
+        <p>Event video output is up to 5 minutes</p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center align-items-center mt-5 plan-cards">
+    <div class="cards-wrapper">
+      <div class="card-container card-1">
+        <div class="left-section">
+          <h4>ADDS</h4>
+          <h1>₹9,999</h1>
+          <div class=" d-flex">
+            <hr />
+            <p class="centered-text px-2">PER</p>
+            <hr />
+          </div>
+          <p>ADVERTISEMENT</p>
+        </div>
+        <div class="right-section">
+          <h5>Details</h5>
+          <p>Up to 40 Sec for Customer Benefits</p>
+          <h5 class="mt-3">Note:</h5>
+          <p>Without camera & logo Intro Charges</p>
+        </div>
+      </div>
+
+      <div class="card-container card-2">
+        <div class="left-section">
+          <h4>POSTS</h4>
+          <h1>₹2500</h1>
+          <div class=" d-flex">
+            <hr />
+            <p class="centered-text px-2">PER</p>
+            <hr />
+          </div>
+          <p>MONTH</p>
+        </div>
+        <div class="right-section">
+          <h5>180 Social Media Posts</h5>
+          <p>3 Posts per Week</p>
+          <h5 class="mt-3">Details</h5>
+          <p>(Except on festival Seasons)</p>
+        </div>
+      </div>
+
+      <div class="card-container card-3">
+        <div class="left-section">
+          <h4>VIDEOS</h4>
+          <h1>₹5000</h1>
+          <div class=" d-flex">
+            <hr />
+            <p class="centered-text px-2">PER</p>
+            <hr />
+          </div>
+          <p>MONTH</p>
+        </div>
+        <div class="right-section">
+          <h5>150 Small Promotional Videos</h5>
+          <p>3 Videos per Week</p>
+          <h5 class="mt-3">Details</h5>
+          <p>(Except on festival Seasons)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="all-plans mt-5">
+    <div class="card1">
+        <div class="header">PRIMARY BUSINESS PACK</div>
+        <div class="empty p-5"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
+                <i class="text-success bi bi-check-circle-fill "></i>
+                <span class="px-4">180 Social Media Posts</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-danger bi bi-x-circle-fill"></i>
+                <span class="px-4">50 Small Proted Videos</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-danger bi bi-x-circle-fill"></i>
+                <span class="px-4">25 Event Videos</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Basic Logo</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Basic Logo Animation</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Catalogue (upto 5 pages)</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Static Website</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Service</span>
+            </li>
+        </ul>
+        <div class="cost py-2">
+        <div class="price p-2 mx-5">
+            <h3 class="text-warning">₹5000</h3>
+        </div>
+        <div class="month mb-5">
+            <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
+            <h6>₹60,000</h6>
+        </div>
+    </div>
+        <a href="#" class="btn btn-buy btn-success">BUY NOW</a>
+    </div>
+    <div class="card2">
+        <div class="header">Secondary BUSINESS PACK</div>
+        <div class="empty p-5"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">180 Social Media Posts</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+
+                <span class="px-4">50 Small Proted Videos</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-danger bi bi-x-circle-fill"></i>
+                <span class="px-4">25 Event Videos</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Basic Logo</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Basic Logo Animation</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Catalogue (upto 5 pages)</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Static Website</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Service</span>
+            </li>
+        </ul>
+        <div class="cost py-2">
+        <div class="price p-2 mx-5">
+            <h3 class="text-warning">₹6667</h3>
+        </div>
+        <div class="month mb-5">
+            <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
+            <h6>₹80,000</h6>
+        </div>
+    </div>
+        <a href="#" class="btn btn-buy ">BUY NOW</a>
+    </div>
+    <div class="card3">
+        <div class="header">ULTRA BUSINESS PACK</div>
+        <div class="empty p-5"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-start align-items-center mt-1 mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">180 Social Media Posts</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">50 Small Proted Videos</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">25 Event Videos</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Basic Logo</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Basic Logo Animation</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Catalogue (upto 5 pages)</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Static Website</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-start align-items-center mb-1">
+                <i class="text-success bi bi-check-circle-fill"></i>
+                <span class="px-4">Service</span>
+            </li>
+        </ul>
+        <div class="cost py-2">
+        <div class="price p-2 mx-5">
+            <h3 class="text-warning">₹57600</h3>
+        </div>
+        <div class="month mb-5">
+            <span class="d-flex mx-5"><hr />PER&nbsp;MONTH <hr /></span>
+            <h6>₹90,000</h6>
+        </div>
+    </div>
+        <a href="#" class="btn btn-buy btn-success">BUY NOW</a>
+    </div>
+</div>
+  
+  </div>
+  <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('body').insertAdjacentHTML('afterbegin', data);
+        });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            })
+            .catch(error => console.error('Error loading the footer:', error));
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

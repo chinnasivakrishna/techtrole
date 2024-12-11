@@ -1,0 +1,50 @@
+/* Mobile Devices (up to 575px) */
+@media (max-width: 575px) {
+.heroic .main_title {
+    font-size: 30px;
+}
+.heroic .sub_title {
+    font-size: 12px;
+}
+.heroic .hero .heroic_img {
+    height: 300px;
+}
+.image_window{
+    padding-top: 30px;
+}
+.page2{
+    padding-top: 50px;
+    background-image: none;
+}
+.contact_container {
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+.contact_form_container .content {
+    padding-left: 0px;
+}
+.footer{
+    top: 8px;
+}
+}
+
+/* Tablets (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+
+/* Laptops (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Desktops (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+
+}
