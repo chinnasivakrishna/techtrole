@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing Cards</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -12,28 +11,24 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/icomoon/style.css">
 
-    <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
 
     <meta name="keywords" content="vertex biosciences, vertex, biosciences, vertex poultry, vertex shrimp, vertex fish">
     <meta name="description" content="Vertex Biosciences addresses some of the world's most pressing global challenges and continue to develop new solutions">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
     <link href="assets/aos/aos.css" rel="stylesheet">
   <style>
-    /* Custom Styles */
     .plans .pricing-container {
       position: relative;
-      overflow: visible; /* Ensure button outside is visible */
+      overflow: visible;
     }
 
     .plans .pricing-card {
       position: relative;
       border-radius: 15px;
-      overflow: hidden; /* Confine the black skew background */
+      overflow: hidden;
       color: white;
       text-align: center;
       height: 350px;
@@ -58,12 +53,12 @@
       background-color: black;
       color: white;
       padding: 5px 15px;
-      border-radius: 10px 10px 0 0; /* Rounded bottom corners for better appearance */
-      position: absolute; /* Make the header absolute */
-      top: -10px; /* Align it with the top border of the card */
-      left: 50%; /* Center the header horizontally */
-      transform: translateX(-50%); /* Center alignment */
-      z-index: 2; /* Ensure the header is above other elements */
+      border-radius: 10px 10px 0 0;
+      position: absolute; 
+      top: -10px; 
+      left: 50%; 
+      transform: translateX(-50%);
+      z-index: 2; 
 
     }
 
@@ -95,23 +90,22 @@
       margin-bottom: 20px;
       position: relative;
       z-index: 2;
-      padding: 0; /* Remove padding from the features container */
+      padding: 0; 
     }
 
-    /* Horizontal Line Styling */
     .plans .pricing-card.primary .features hr,
     .pricing-card.secondary .features hr {
-      border: 0; /* Reset the default border */
-      height: 1px; /* Set a specific height for the line */
-      background-color: #fff; /* Set color to white for better visibility */
+      border: 0;
+      height: 1px;
+      background-color: #fff;
     }
 
     .plans .pricing-card.primary .features hr {
-      background-color: #d4ac0d; /* Specific color for primary card */
+      background-color: #d4ac0d;
     }
 
     .plans .pricing-card.secondary .features hr {
-      background-color: #038eff; /* Specific color for secondary card */
+      background-color: #038eff;
     }
 
     .plans .buy-btn {
@@ -122,10 +116,10 @@
       padding: 10px 10px;
       transition: 0.3s ease;
       position: absolute;
-      bottom: -25px; /* Half the button outside the card */
+      bottom: -25px; 
       left: 50%;
       transform: translateX(-50%);
-      z-index: 3; /* Ensure button is above everything */
+      z-index: 3;
     }
 
     .plans .buy-btn {
@@ -148,9 +142,10 @@
 
     .plans .details-note-container .card {
       padding: 20px;
+      width: 400px;
       background-color: #f8f9fa;
       border-radius: 15px;
-      margin-left: 120px;
+      margin-left: 19%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, background-color 0.3s ease;
       text-align: center;
@@ -173,24 +168,23 @@
       font-weight: bold;
       margin-bottom: 10px;
     }
-    /* Scoped Styles for Pricing Section */
     .pricing-container {
-  margin-left: 70px;
+  margin-left: 19%;
   width: 300px;
   position: relative;
-  overflow: visible; /* Ensure button outside is visible */
+  overflow: visible;
 }
 .second{
-  margin-left: 150px;
+  margin-left: 40%;
   width: 300px;
   position: relative;
-  overflow: visible; /* Ensure button outside is visible */
+  overflow: visible;
 }
 
  .pricing-card {
   position: relative;
   border-radius: 15px;
-  overflow: hidden; /* Confine the black skew background */
+  overflow: hidden;
   color: white;
   text-align: center;
   padding: 20px;
@@ -216,12 +210,12 @@
   background-color: black;
   color: white;
   padding: 5px 15px;
-  border-radius: 10px 10px 0 0; /* Rounded bottom corners for better appearance */
-  position: absolute; /* Make the header absolute */
-  top: -10px; /* Align it with the top border of the card */
-  left: 50%; /* Center the header horizontally */
-  transform: translateX(-50%); /* Center alignment */
-  z-index: 2; /* Ensure the header is above other elements */
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
  .pricing-card.primary {
@@ -252,22 +246,22 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 2;
-  padding: 0; /* Remove padding from the features container */
+  padding: 0;
 }
 
  .pricing-card.primary .features hr,
 .pricing-card.secondary .features hr {
-  border: 0; /* Reset the default border */
-  height: 1px; /* Set a specific height for the line */
-  background-color: #fff; /* Set color to white for better visibility */
+  border: 0;
+  height: 1px;
+  background-color: #fff;
 }
 
  .pricing-card.primary .features hr {
-  background-color: #d4ac0d; /* Specific color for primary card */
+  background-color: #d4ac0d;
 }
 
  .pricing-card.secondary .features hr {
-  background-color: #038eff; /* Specific color for secondary card */
+  background-color: #038eff;
 }
 
  .buy-btn {
@@ -278,10 +272,10 @@
   padding: 10px 10px;
   transition: 0.3s ease;
   position: absolute;
-  bottom: -25px; /* Half the button outside the card */
+  bottom: -25px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3; /* Ensure button is above everything */
+  z-index: 3;
 }
 
  .buy-btn:hover {
@@ -292,13 +286,12 @@
 .plan-cards .card-container {
       position: relative;
       display: flex;
-      width: 400px; /* Adjust the width of each card */
-      height: 200px; /* Fixed height */
+      width: 400px;
+      height: 200px;
       border-radius: 0 0 0 40px;
       overflow: hidden;
     }
 
-    /* Create a cross line dividing the left and right sections */
     .plan-cards .card-container::before {
       content: '';
       position: absolute;
@@ -308,7 +301,7 @@
       height: 100%;
       background: linear-gradient(100deg, transparent 39%, #273746 35%, #273746 100%, transparent 51%);
       pointer-events: none;
-      z-index: 1; /* Make sure the line is under text */
+      z-index: 1; 
     }
 
     .plan-cards .left-section {
@@ -319,7 +312,7 @@
       padding: 20px;
       text-align: center;
       position: relative;
-      z-index: 2; /* Ensure text appears on top of divider */
+      z-index: 2;
     }
 
     .plan-cards .right-section {
@@ -329,32 +322,30 @@
       justify-content: flex-start;
       padding: 20px;
       position: relative;
-      z-index: 2; /* Ensure text appears on top of divider */
+      z-index: 2;
     }
 
     .plan-cards .left-section h1,
     .plan-cards .left-section p,
     .plan-cards .right-section h5,
     .plan-cards .right-section p {
-      color: white; /* Ensure text stays white */
+      color: white;
       margin: 0;
     }
 
-    /* Card 1 */
     .plan-cards .card-1 {
-      background-color: #d75c4e; /* Red background */
+      background-color: #d75c4e;
     }
     .plan-cards .card-1 h4 {
-      color: #d75c4e; /* Red background */
+      color: #d75c4e;
     }
 
-    /* Card 2 (POSTS) */
     .plan-cards .card-2 {
-      background-color: #7d4cd5; /* Purple background for Posts */
+      background-color: #7d4cd5;
     }
 
     .plan-cards .card-2 h4{
-      color: #7d4cd5; /* Purple background for Posts */
+      color: #7d4cd5;
     }
 
 
@@ -372,40 +363,37 @@
    
 
 
-    /* Card 3 (VIDEOS) */
     .plan-cards .card-3 {
-      background-color: #f61b7f; /* Pink background for Videos */
+      background-color: #f61b7f;
     }
 
     .plan-cards .card-3 h4{
-      color: #f61b7f; /* Pink background for Videos */
+      color: #f61b7f;
     }
 
 
 
-    /* Styling for hr */
     .plan-cards  hr {
-      border: 0; /* Remove default border */
-      height: 2px; /* Height for the line */
-      background-color: #fff; /* White color */
-      width: 100%; /* Make the line shorter than full width */
-      margin: 10px 0; /* Space above and below */
+      border: 0;
+      height: 2px;
+      background-color: #fff;
+      width: 100%;
+      margin: 10px 0;
       position: relative;
-      z-index: 2; /* Ensure the hr stays above the background */
+      z-index: 2;
     }
 
     .plan-cards .centered-text {
       position: relative;
-      z-index: 3; /* Ensure text appears above the hr */
-      margin-top: -10px; /* Adjust to fine-tune text position */
+      z-index: 3;
+      margin-top: -10px;
     }
 
-    /* Parent container to display cards side by side */
     .plan-cards .cards-wrapper {
       display: flex;
-      justify-content: center; /* Center cards */
+      justify-content: center;
       align-items: center;
-      gap: 20px; /* Space between cards */
+      gap: 20px;
     }
 
     .all-plans  {
@@ -529,6 +517,7 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 2;
+            color: white;
             width: 220px;
         }
 
@@ -547,13 +536,13 @@
         }
         
         .all-plans hr {
-      border: 0; /* Remove default border */
-      height: 2px; /* Height for the line */
-      background-color: #fff; /* White color */
-      width: 100%; /* Make the line shorter than full width */
-      margin: 10px 0; /* Space above and below */
+      border: 0;
+      height: 2px;
+      background-color: #fff;
+      width: 100%;
+      margin: 10px 0;
       position: relative;
-      z-index: 2; /* Ensure the hr stays above the background */
+      z-index: 2;
     }
     .empty{
             background-color: rgb(65, 57, 57);
@@ -585,7 +574,6 @@
 <body>
   <div class="container-fluid d-flex plans" style="overflow: visible;">
     <div class="row g-4 m-5 justify-content-between col-md-6" style="overflow: visible;">
-      <!-- Primary Card -->
       <div class="col-md-6 mt-5">
         <div class="pricing-container">
           <div class="header">PRIMARY</div>
@@ -604,7 +592,6 @@
         </div>
       </div>
 
-      <!-- Secondary Card -->
       <div class="col-md-6 mt-5">
         <div class="pricing-container second">
           <div class="header">SECONDARY</div>
@@ -627,9 +614,7 @@
     </div>
     
 
-    <!-- Details and Note Section -->
     <div class="details-note-container m-5">
-      <!-- Details Div -->
       <div class="card details mt-5">
         <h4 class="card-title">Details</h4>
         <p>3 Posts per Week (Except on festival seasons)</p>
@@ -637,7 +622,6 @@
         <p>2 Event videos per month<br> (Trimming/Slide Show & Basic Effects)</p>
       </div>
 
-      <!-- Note Div -->
       <div class="card note">
         <h4 class="card-title">Note</h4>
         <p>Event video output is up to 5 minutes</p>
@@ -646,13 +630,10 @@
   </div>
   <div class="d-flex justify-content-center align-items-center mt-5 plan-cards">
     <div class="cards-wrapper">
-      <!-- Card 1 -->
       <div class="card-container card-1">
-        <!-- Left Section -->
         <div class="left-section">
           <h4>ADDS</h4>
           <h1>₹9,999</h1>
-          <!-- The hr lines on both sides of "PER" -->
           <div class=" d-flex">
             <hr />
             <p class="centered-text px-2">PER</p>
@@ -660,7 +641,6 @@
           </div>
           <p>ADVERTISEMENT</p>
         </div>
-        <!-- Right Section -->
         <div class="right-section">
           <h5>Details</h5>
           <p>Up to 40 Sec for Customer Benefits</p>
@@ -669,13 +649,10 @@
         </div>
       </div>
 
-      <!-- Card 2 (POSTS) -->
       <div class="card-container card-2">
-        <!-- Left Section -->
         <div class="left-section">
           <h4>POSTS</h4>
           <h1>₹2500</h1>
-          <!-- The hr lines on both sides of "PER" -->
           <div class=" d-flex">
             <hr />
             <p class="centered-text px-2">PER</p>
@@ -683,7 +660,6 @@
           </div>
           <p>MONTH</p>
         </div>
-        <!-- Right Section -->
         <div class="right-section">
           <h5>180 Social Media Posts</h5>
           <p>3 Posts per Week</p>
@@ -692,13 +668,10 @@
         </div>
       </div>
 
-      <!-- Card 3 (VIDEOS) -->
       <div class="card-container card-3">
-        <!-- Left Section -->
         <div class="left-section">
           <h4>VIDEOS</h4>
           <h1>₹5000</h1>
-          <!-- The hr lines on both sides of "PER" -->
           <div class=" d-flex">
             <hr />
             <p class="centered-text px-2">PER</p>
@@ -706,7 +679,6 @@
           </div>
           <p>MONTH</p>
         </div>
-        <!-- Right Section -->
         <div class="right-section">
           <h5>150 Small Promotional Videos</h5>
           <p>3 Videos per Week</p>
@@ -716,7 +688,7 @@
       </div>
     </div>
   </div>
-  <div class="all-plans">
+  <div class="all-plans mt-5">
     <div class="card1">
         <div class="header">PRIMARY BUSINESS PACK</div>
         <div class="empty p-5"></div>
@@ -871,7 +843,6 @@
         .then(data => {
             document.querySelector('body').insertAdjacentHTML('afterbegin', data);
         });
-        <!-- Footer Script to Load footer.html -->
         fetch('footer.html')
             .then(response => response.text())
             .then(data => {
@@ -879,7 +850,6 @@
             })
             .catch(error => console.error('Error loading the footer:', error));
   </script>
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
